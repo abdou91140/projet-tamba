@@ -4,11 +4,11 @@ var projects = [
   {
     name: "Infrastructure",
     description:
-      "Construction d’un centre médical et d’une salle de classe à Koussan (Sénégal oriental).",
+      "Accompagnement vers le logment de famille.",
   },
   {
     name: "Santé",
-    description: "Approvisionnement régulier de la pharmacie.",
+    description: "Accompagnement de malade et suivie de traitement.",
   },
   {
     name: "Éducation",
