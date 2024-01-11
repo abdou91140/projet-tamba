@@ -26,7 +26,7 @@ export default function Footer() {
           </a>
         </div>
       ))}
-            <p className="text-center">&copy; 2023 Project Tamba. All rights reserved.</p>
+            <p className="text-center">&copy; 2023 Project Diammo. All rights reserved.</p>
     </div>
   );
 }

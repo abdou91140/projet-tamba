@@ -1,50 +1,54 @@
 import Layout from "../components/layout";
-import { HomeIcon, HeartIcon, AcademicCapIcon, GlobeIcon } from "@heroicons/react/outline";
 
 var features = [
-  {
-    name: "Infrastructure",
-    description:
-      "Accompagnement vers le logment de famille.",
-    icon: HomeIcon
-  },
+  /*     {
+        name: "Infrastructure",
+        description:
+          "Accompagnement vers le logment de famille.",
+          icon: HomeIcon
+      }, */
   {
     name: "Santé",
     description: "Accompagnement de malade et suivie de traitement.",
-    icon: HeartIcon
+    icon: "images/environement.png"
   },
   {
-    name: "Éducation",
-    description: "Approvisionnement régulier de fournitures scolaires.",
-    icon: AcademicCapIcon
-  },
+    name: "Éducation civique",
+    description: "Néttoyage communautaire, distribution de repas.",
+    icon: "images/young.png" },
   {
-    name: "Eau potable",
-    description: "Construction d’un puit.",
-    icon: GlobeIcon
-  },
+    name: "Culture",
+    description: "Apprentissage et transmition des traditions multiethnique.",
+    icon: "images/education.png" },
 ];
 
 export default function Home() {
   return (
     <Layout>
       <div className="container mx-auto">
-        <div class="mx-auto max-w-screen-xl text-center lg:py-16">
-          <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Site en construction</h1>
-        </div> {/* Woman Image */}
-        <div className="flex justify-center ">
-          <img width={850} src="/images/african-woman.png" alt="African Woman" />
-        </div>
 
+        <div className="flex justify-evenly items-top" >
+          <img width={350} src="/images/man_with_earth.png" alt="Man holding the earth" /><div>
+            <h1 className="text-6xl pt-5">Diammo</h1> <h2 className="text-2xl pt-3">Association des femmes <br/> de Diamaguene-ouest de Nguékhokh</h2>
+          </div>
+        </div>
+        <div className="flex justify-evenly items-center pt-9" >
+         
+     <h2 className="text-2xl">Pour aider les femmes</h2>
+           <img width={350} src="/images/woman_helping.png" alt="Man holding the earth" /><div></div>
+        </div>
         {/* Features */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
-          {/*    {features.map((feature, index) => (
-            <div key={index} className="flex flex-col items-center">
-              <feature.icon className="h-12 w-12 mb-2" />
-              <h3 className="text-xl font-bold">{feature.name}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </div>
-          ))} */}
+        <div className="p-20 ">
+          <h2 className="text-5xl text-center p-20">Les actions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
+            {features.map((feature, index) => (
+              <div key={index} className="flex flex-col items-center">
+               <img src={feature.icon} /> 
+                <h3 className="text-xl font-bold">{feature.name}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </Layout>
