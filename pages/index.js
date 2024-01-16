@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Layout from "../components/layout";
 
 var features = [
@@ -8,49 +9,56 @@ var features = [
           icon: HomeIcon
       }, */
   {
-    name: "Santé",
-    description: "Accompagnement de malade et suivie de traitement.",
+    name: "Environnement et Santé",
+    description: "Éco-geste, soutien aux personnes malades et suivi des traitements.",
     icon: "images/environement.png"
   },
   {
     name: "Éducation civique",
-    description: "Néttoyage communautaire, distribution de repas.",
+    description: "Actions de nettoyage communautaire et distribution, partage de produit alimentaire.",
     icon: "images/young.png" },
   {
     name: "Culture",
-    description: "Apprentissage et transmition des traditions multiethnique.",
+    description: "Apprentissage, préservation et transmition des traditions multiethniques.",
     icon: "images/education.png" },
 ];
 
 export default function Home() {
   return (
-    <Layout>
-      <div className="container mx-auto">
+<Layout>
+  <div className=" container mx-auto">
 
-        <div className="flex justify-evenly items-top" >
-          <img width={350} src="/images/man_with_earth.png" alt="Man holding the earth" /><div>
-            <h1 className="text-6xl pt-5">Diammo</h1> <h2 className="text-2xl pt-3">Association des femmes <br/> de Diamaguene-ouest de Nguékhokh</h2>
-          </div>
-        </div>
-        <div className="flex justify-evenly items-center pt-9" >
-         
-     <h2 className="text-2xl">Pour aider les femmes</h2>
-           <img width={350} src="/images/woman_helping.png" alt="Man holding the earth" /><div></div>
-        </div>
-        {/* Features */}
-        <div className="p-20 ">
-          <h2 className="text-5xl text-center p-20">Les actions</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-            {features.map((feature, index) => (
-              <div key={index} className="flex flex-col items-center">
-               <img src={feature.icon} /> 
-                <h3 className="text-xl font-bold">{feature.name}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+    {/* Header Section */}
+    <div className="flex flex-col-reverse sm:flex-row justify-center items-top gap-20">
+      <img className="h-auto sm:max-w-s mb-5 sm:mb-0 sm:p-5" src="/images/man_with_earth.png" alt="Man holding the earth" />
+      <div className="text-center sm:text-left pt-10">
+        <h1 className="text-4xl sm:text-5xl pt-5 font-semibold tracking-wide text-main-color">Diammo</h1>
+        <h2 className="text-xl sm:text-2xl pt-3">Association des femmes <br/> de Diamaguene-ouest de Nguékhokh</h2>
       </div>
-    </Layout>
+    </div>
+
+    {/* Second Section */}
+    <div className="flex flex-col items-center sm:flex-row justify-center pt-9 gap-10">
+     <div className="flex flex-col"> <h2 className="text-4xl sm:text-5xl font-semibold tracking-wide text-main-color">Nos valeurs :</h2>
+      <h2 className="text-xl sm:text-2xl mb-5 pt-3 sm:mb-0 sm:mr-5">Respect, écoute et solidarité.</h2></div>
+      <img className= "h-auto sm:max-w-xs" src="/images/woman_helping.png" alt="Woman helping" />
+    </div>
+
+    {/* Features Section */}
+    <div className="p-8 sm:p-20">
+      <h2 className="text-3xl sm:text-5xl text-center mb-5 p-5 font-semibold tracking-wide text-main-color">Les actions</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {features.map((feature, index) => (
+          <div key={index} className="flex flex-col items-center mb-8" >
+            <Link href={`/projects#${feature.name}`} ><img className="mb-2" src={feature.icon} alt={feature.name} />
+            <h3 className="text-lg font-bold">{feature.name}</h3>
+            <p className="text-gray-600">{feature.description}</p></Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</Layout>
+
   );
 }
