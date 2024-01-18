@@ -15,8 +15,6 @@ var projects = [
     description: "Au cœur de notre quartier, des efforts d'apprentissage, de préservation et de transmission des traditions façonnent notre identité collective. Les membres s'engagent à préserver les coutumes des différentes ethnies du Sénégal, partageant connaissances et expériences interculturelles. Cette initiative renforce notre tissu social en célébrant la diversité ethnique du pays, créant ainsi un environnement où les traditions sont enseignées, préservées, et transmises aux générations futures. Une démarche concise, mais riche en héritage culturel sénégalais.",
     icon: "images/education.png"
   },
-
-
 ];
 
 export default function Projects() {
@@ -68,7 +66,7 @@ export default function Projects() {
         <div className="pt-20 flex flex-col-reverse sm:flex-row justify-center items-center gap-1 sm:items-center">
           <div className="sm:w-full lg:w-1/3 text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-wide text-main-color">
-              <span className="block"id={`${projects[2].name}`}>{projects[2].name}</span>
+              <span className="block" id={`${projects[2].name}`}>{projects[2].name}</span>
               <span className="block text-red-500 xl:inline">
                 autour du quartier
               </span>

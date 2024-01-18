@@ -1,11 +1,12 @@
-// pages/api/contact.js
 import axios from 'axios';
+const FORM_KEY = process.env.NEXT_PUBLIC_FORM_KEY;
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
       // Forward the form data to your email using a service like Formspree
-      const response = await axios.post(`'https://formspree.io/'${FORM_KEY}`, req.body);
+      
+      const response = await axios.post('https://formspree.io/f/'+FORM_KEY, req.body);
 
       if (response.status === 200) {
         res.status(200).json({ success: true });
