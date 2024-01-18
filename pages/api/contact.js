@@ -5,7 +5,7 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
       // Forward the form data to your email using a service like Formspree
-      const response = await axios.post('https://formspree.io//f/mwkgpnlp+', req.body);
+      const response = await axios.post(`'https://formspree.io/'${FORM_KEY}`, req.body);
 
       if (response.status === 200) {
         res.status(200).json({ success: true });
