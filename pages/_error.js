@@ -1,12 +1,12 @@
-// pages/_error.js or pages/_error.tsx
 import React from 'react';
 
 const CustomError = ({ statusCode }) => {
   return (
-    <div className="container mx-auto">
-    <h1 className="text-4xl text-center sm:text-5xl font-semibold tracking-wide text-main-color"> {statusCode} - Erreur</h1>
-      <h2>Désolé, Y'a un problème.</h2>
-      <p>Nous somme sur le dossier pour réparer le bug</p>
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="container mx-auto text-center">
+        <h1 className="text-4xl sm:text-5xl font-semibold tracking-wide text-main-color pb-10">{statusCode} - Erreur</h1>
+        <h2>Désolé, Y'a un problème. Nous sommes sur le dossier pour réparer le bug ...</h2>
+      </div>
     </div>
   );
 };
