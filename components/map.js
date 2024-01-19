@@ -1,15 +1,15 @@
 // components/Map.js
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
-const Map = ({ location }) => {
+const Map = () => {
     const mapContainerStyle = {
         height: '400px',
         width: '100%',
     };
 
     const center = {
-        lat: location.latitude,
-        lng: location.longitude,
+        lat: 14.5180644,
+        lng: -17.010441,
     };
     return (
         <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>

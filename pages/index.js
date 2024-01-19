@@ -26,7 +26,7 @@ var features = [
   },
 ];
 
-export default function Home({ location }) {
+export default function Home() {
   return (
     <Layout>
       <div className=" container mx-auto">
@@ -62,23 +62,10 @@ export default function Home({ location }) {
         </div>
         <h2 className="text-3xl sm:text-5xl text-center mb-5 p-5 font-semibold tracking-wide text-main-color">Localisation</h2>
         <div className="pb-8 sm:pb-20">
-          <Map location={location} />
+          <Map/>
         </div>
       </div>
     </Layout>
 
   );
-}
-export async function getStaticProps() {
-  const location = {
-    latitude: 14.5180644,
-    longitude: -17.010441,
-  };
-
-  return {
-    props: {
-      location,
-    },
-    revalidate: 86400,
-  };
 }
