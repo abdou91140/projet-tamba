@@ -63,7 +63,7 @@ export default function Projects() {
 
 
         </div>
-        <div className="pt-20 flex flex-col-reverse sm:flex-row justify-center items-center gap-1 sm:items-center">
+        <div className="pt-20 pb-20 flex flex-col-reverse sm:flex-row justify-center items-center gap-1 sm:items-center">
           <div className="sm:w-full lg:w-1/3 text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-wide text-main-color">
               <span className="block" id={`${projects[2].name}`}>{projects[2].name}</span>
