@@ -7,7 +7,7 @@ const navigation = [
 ];
 export default function Footer() {
   return (
-    <div className="mt-auto px-2 pt-2 pb-3 space-y-1 flex lg:justify-center md:justify-between">
+    <div className="mt-auto px-2 pt-2 pb-3 space-y-1 flex justify-center ">
       {navigation.map((item) => (
         <div
           className="h-6 w-6 text-green-600 mx-5"
@@ -26,7 +26,7 @@ export default function Footer() {
           </a>
         </div>
       ))}
-            <p className="text-center">&copy; 2023 Project Diammo. All rights reserved.</p>
+            <p className="text-center"> &copy; Diammo {new Date().getFullYear()} - Tous Droits Réservés</p>
     </div>
   );
 }
